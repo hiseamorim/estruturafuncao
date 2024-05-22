@@ -7,50 +7,40 @@
 </head>
 <body>
     <h1>Insira os Números para Verificação</h1>
-    <form action="process.php" method="post">
+    <form action="" method="post">
         <label for="num1">Número 1:</label>
-        <input type="number" id="num1" name="num1" required><br><br>
+        <input type="number" id="num1" name="numeros[]" required><br><br>
 
         <label for="num2">Número 2:</label>
-        <input type="number" id="num2" name="num2" required><br><br>
+        <input type="number" id="num2" name="numeros[]" required><br><br>
 
         <label for="num3">Número 3:</label>
-        <input type="number" id="num3" name="num3" required><br><br>
+        <input type="number" id="num3" name="numeros[]" required><br><br>
 
         <label for="num4">Número 4:</label>
-        <input type="number" id="num4" name="num4" required><br><br>
+        <input type="number" id="num4" name="numeros[]" required><br><br>
 
         <label for="num5">Número 5:</label>
-        <input type="number" id="num5" name="num5" required><br><br>
+        <input type="number" id="num5" name="numeros[]" required><br><br>
 
         <input type="submit" value="Verificar Números">
     </form>
 
     <h1>Resultados da Verificação de Números</h1>
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $numeros = [];
-        $erros = false;
-
-        // Verificar se todos os números foram fornecidos e são válidos
-        for ($i = 1; $i <= 5; $i++) {
-            $input_name = "num" . $i;
-            if (isset($_POST[$input_name]) && is_numeric($_POST[$input_name])) {
-                $numeros[] = $_POST[$input_name];
+   // verifica se foi enviado
+   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // pega os valores
+    $numeros = $_POST['numeros'];
+        function verificarParidade($numero) {
+            if ($numero == 0) {
+                return "neutro";
+            } elseif ($numero % 2 == 0) {
+                return "par";
             } else {
-                echo "<p>O número $i não é válido.</p>";
-                $erros = true;
+                return "ímpar";
             }
         }
-
-        if (!$erros) {
-            // Função para verificar se o número é par ou ímpar
-            function verificarParidade($numero) {
-                if ($numero == 0) {
-                    return "neutro";
-                }
-                return ($numero % 2 == 0) ? "par" : "ímpar";
-            }
 
             // Função para verificar se o número é redondo (múltiplo de 10)
             function verificarRedondo($numero) {
@@ -85,8 +75,9 @@
             foreach ($numeros as $numero) {
                 echo "<p>" . obterDescricao($numero) . "</p>";
             }
+
         }
-    }
+    
     ?>
 </body>
 </html>
