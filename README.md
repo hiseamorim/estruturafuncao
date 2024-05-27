@@ -1,4 +1,4 @@
-# estruturafuncao
+# Estrutura de função
 ![imagem](img/estrutura.png)
 
 ## 📋Descrição
