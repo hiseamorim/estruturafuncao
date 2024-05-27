@@ -11,9 +11,9 @@ Esse site foi criado como exemplo de uso de HTML e PHP para processamento de for
 O usuário deve inserir cinco números nos campos fornecidos, em seguida, basta clicar no botão "Verificar Números" para ver os resultados da verificação.
 
 ### 🛠️ Tecnologia ultilizadas
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" width=50  /
-> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons//-.svg" width=50/>  /
-> |  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width=50 /
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" width=50  
+> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons//-.svg" width=50/>  
+> |  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width=50 
 > |<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width=50/> |
 | :---: | :---: | :---: | :---: | :---: |
 
